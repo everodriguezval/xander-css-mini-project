@@ -4,58 +4,73 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/style.css">
     <title>Checkout Page Coffee Masters</title>
 </head>
 <body>
     <header>
-        <nav><img src="./assets/coffee_logo.jpg" alt="coffee logo" height="150px" width="150px"><h1>Coffee Masters</h1></nav>
+        <nav>
+            <img src="./assets/coffee_masters_logo.png" alt="coffee logo">
+            <h1>Coffee Masters</h1>
+        </nav>
     </header>
     <main>
-        <article id="items">
+        <article id="items" class="article-style">
             <h2>ITEMS</h2>
-            <section>
+            <section class="item">
                 <p>1x</p>
                 <p>Cappuccino</p>
                 <p>$3.35</p>
-                <p>Light Foam</p>               
+                <p class="extra-info">Light Foam</p>               
             </section>
-            <section>
+            <div class="line"></div>
+            <section class="item">
                 <p>1x</p>
                 <p>Cappuccino</p>
                 <p>$3.85</p>
-                <p>Almond Milk</p>
-                <p>Double Espresso Shot</p>                
+                <p class="extra extra-info">Almond Milk</p>
+                <p class="extra-info">Double Espresso Shot</p>                
             </section>
-            <section>
+            <div class="line"></div>
+            <section class="item">
                 <p>1x</p>
                 <p>Croissant</p>
                 <p>$2.45</p>
-                <p>Butter</p>
+                <p class="extra-info">Butter</p>
             </section>
         </article>
-        <article id="payment-details">
+        <article class="article-style">
             <section id="customer-name">
                 <h2>NAME</h2>
-                <label>Name for order</label>
-                <input type="text">
+                <div class="label-overlaid">
+                    <label for="full-name" class="input-label">Name for order</label>
+                    <input type="text" id="full-name" name="full-name" required>
+                </div>
             </section>
+        </article>
+        <article class="article-style">
             <section id="card-details">
-                <h2>PAYMENT</h2>            
-                <label>Card number</label>
-                <input type="text">
-                <label>CCV Number</label>
-                <input type="text">
+                <h2>PAYMENT</h2> 
+                <div class="label-overlaid">     
+                    <label for="card-number" class="input-label">Card number</label>
+                    <input type="number" id="card-number" name="card-number" required>
+                </div>
+                <div class="label-overlaid"> 
+                    <label for="ccv-number" class="input-label">CCV Number</label>
+                    <input type="number" id="ccv-number" name="ccv-number" required>
+                </div>
             </section>
         </article>
         <section id="total-price">
-            <p>Subtotal</p>
-            <p>$19.27</p>
-            <p>Tax</p>
-            <p>$0.96</p>
-            <p>Total</p>
-            <p>$20.23</p>    
-        </section>
-        <button id="place-order">Place Order</button>
+            <p>Subtotal:</p>
+            <p class="right">$9.65</p>
+            <p>Tax:</p>
+            <p class="right">$0.82</p>
+            <p class="total">Total:</p>
+            <p class="right total">$10.47</p>    
+        </section>       
+        <button id="place-order">Place Order</button>        
     </main>   
 </body>
 </html>
