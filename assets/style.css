@@ -175,6 +175,20 @@ button {
     display: block;
 }
 
-@media screen and (min-width:750px){
+@media screen and (min-width: 750px) {
+    .grid-lg-screens {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 0.2fr 0.2fr;
+        gap: 1rem;
+    }
+
+    #items {
+        grid-column: 1 / 2;
+        grid-row: 1 / 3;
+    }
     
+    .article-style {
+        margin-bottom: 0;
+    }
 }
