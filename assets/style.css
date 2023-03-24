@@ -33,6 +33,7 @@ main {
     background-color: var(--x);
     padding: 1rem;
     border-radius: 15px;
+    margin-bottom: 1rem;
 }
 
 /* nav section */
@@ -131,11 +132,11 @@ section input {
     margin-top: 1rem;
 }
 
-#card-details .label-overlaid:nth-child(2) {
+.full-width {
     width: 100%;
 }
 
-#card-number {
+#card-number, #full-name {
     width: 100%;
 }
 
@@ -172,4 +173,8 @@ button {
     width: 90%;
     margin: 0 auto;
     display: block;
+}
+
+@media screen and (min-width:750px){
+    
 }
