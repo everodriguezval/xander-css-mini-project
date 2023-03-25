@@ -55,11 +55,11 @@
                     <h2>PAYMENT</h2> 
                     <div class="label-overlaid full-width">     
                         <label for="card-number" class="input-label">Card number</label>
-                        <input type="number" id="card-number" name="card-number" required>
+                        <input id="card-number" type="tel" name="card-number" inputmode="numeric" pattern="[0-9\s]{13,19}" autocomplete="cc-number" maxlength="19" placeholder="xxxx xxxx xxxx xxxx">
                     </div>
                     <div class="label-overlaid"> 
                         <label for="ccv-number" class="input-label">CCV Number</label>
-                        <input type="number" id="ccv-number" name="ccv-number" required>
+                        <input type="text" id="ccv-number" name="ccv-number" required>
                     </div>
                 </section>
             </article>
@@ -72,7 +72,7 @@
             <p class="total">Total:</p>
             <p class="right total">$10.47</p>    
         </section>       
-        <button>Place Order</button>        
+        <button><h2>PLACE ORDER</h2></button>        
     </main>   
 </body>
 </html>

@@ -1,14 +1,26 @@
 :root {
     --puce: #c37d92;
-    --rosy: #d89a9e;
-    --pale: #e0a58a;
+    --rosy: #fa6c076e;
+    --pale: #cfa38e;
     --fuchsia: #bd5071;
     --coffee: #43281c;
     --cream: #fbf2c0;;
-    --brown: #885a2d;
-    --light-rose: #eee1d5;
+    --brown: #5f3c1a;
+    --light-rose: #f6f2ee;
     --x:#efefef;
     --y: #b08968;
+    --gradient: linear-gradient(
+      45deg,
+      #ea952557,
+      #ea882557,
+      #e7d2165f,
+      #ff97715c,
+      #ffc75f5f,
+      #f9f97154
+    );
+    --whitish: #f4f0ec88;
+
+
 }
 
 * {
@@ -31,10 +43,13 @@ header, main {
 }
 
 main {
-    background-color: var(--x);
+    background-image: var(--gradient);
+    /* background-color: var(--x); */
     padding: 1rem;
     border-radius: 15px;
     margin-bottom: 1rem;
+    animation: bg-animation 7s infinite;
+    background-size: 400%;
 }
 
 /* nav section */
@@ -150,7 +165,7 @@ section input {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    margin: 2rem auto;
+    margin: 3rem auto;
     width: 90%;
     max-width: 250px;
 }
@@ -168,20 +183,56 @@ section input {
 }
 
 button {
-    background-color: var(--pale);
+    background-color: var(--light-rose);
     border: none;
     border-radius: 20px;
     padding: 0.5rem;
     width: 90%;
+    max-width: 10rem;
     margin: 0 auto;
     display: block;
+    animation: mymove 5s infinite;
+    cursor: pointer;
 }
+
+
+button h2 {
+    font-size: 0.8rem;
+}
+
+button {
+    color: var(--brown);
+}
+
+button:hover {
+    color: var(--x);
+    background-color: var(--coffee);
+}
+
+@keyframes bg-animation {
+    0% {
+      background-position: left;
+    }
+    50% {
+      background-position: right;
+    }
+    100% {
+      background-position: left;
+    }
+  }
+
+/* 
+@keyframes mymove {
+  0%   {background: rgba(251, 163, 80, 0.715);}
+  50%   {background: rgb(251, 209, 0);}
+  100% {background: rgba(251, 163, 80, 0.715);}
+} */
 
 @media screen and (min-width: 750px) {
     .grid-lg-screens {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 0.2fr 0.2fr;
+        grid-template-rows: 0.5fr 0.5fr;
         gap: 1rem;
     }
 
